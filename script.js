@@ -1,12 +1,12 @@
 // ===== Typing Animation =====
 const typedTextElement = document.getElementById('typed-text');
 const titles = [
-  'Senior Software Engineer',
-  'Java & Spring Boot Expert',
-  'Microservices Architect',
-  'GenAI & RAG Developer',
-  'Kafka Specialist',
-  'Backend Engineer'
+  'Data Scientist',
+  'AI Engineer',
+  'Data Engineer',
+  'Automation Developer',
+  'Solution Architect',
+  'Python Developer'
 ];
 
 let titleIndex = 0;
