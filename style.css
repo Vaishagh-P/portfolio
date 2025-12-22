@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #000000;
+    color: #fff;
+}
+
+span { color: #ffbd39; } /* The yellow accent color */
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: #000;
+}
+
+nav ul { display: flex; list-style: none; }
+nav ul li a { color: white; text-decoration: none; padding: 0 15px; font-size: 14px; }
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90vh;
+    padding: 0 10%;
+}
+
+.hero h1 { font-size: 60px; line-height: 1.1; margin: 20px 0; }
+
+.btn-primary {
+    background: #ffbd39;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Progress Bars */
+.bar {
+    width: 100%;
+    background: #222;
+    height: 10px;
+    margin-top: 5px;
+}
+
+.progress {
+    background: #ffbd39;
+    height: 100%;
+}
