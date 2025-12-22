@@ -3,52 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shasika Shehan | Portfolio</title>
+    <title>Your Name | Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Link to your separate CSS file -->
     <link rel="stylesheet" href="style.css">
-    <!-- Include a font like Poppins from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">SHEHAN</div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">PORTFOLIO</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+            <a href="#contact" class="btn-touch">Get in Touch</a>
+        </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-text">
-            <span>HELLO!</span>
-            <h1>I'm <span>Shasika Shehan</span></h1>
-            <h2>Fullstack Web Developer</h2>
-            <div class="btns">
-                <button class="btn-primary">HIRE ME</button>
-                <button class="btn-outline">MY WORKS</button>
+    <header class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h1>Your Name</h1>
+                <p class="subtitle">Full-Stack Developer & AI Engineer</p>
+                <p class="description">Building intelligent, scalable digital products and immersive web experiences.</p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn-primary">Explore Work</a>
+                    <a href="#" class="btn-secondary">Resume</a>
+                </div>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <!-- Replace with your image link later -->
+                    <i class="fas fa-user"></i>
+                </div>
             </div>
         </div>
-        <div class="hero-img">
-            <img src="your-photo.png" alt="Profile">
+    </header>
+
+    <section id="about" class="about">
+        <div class="container about-grid">
+            <div class="about-content">
+                <span class="tag">ABOUT ME</span>
+                <h2>Builder at heart, engineer by craft.</h2>
+                <p>I architect solutions that scale. From AI-powered applications to high-performance web platforms, I focus on creating technology that matters.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>25+</h3>
+                    <p>Projects</p>
+                </div>
+                <div class="stat-card">
+                    <h3>10+</h3>
+                    <p>Tools</p>
+                </div>
+                <div class="stat-card">
+                    <h3>5+</h3>
+                    <p>Hackathons</p>
+                </div>
+                <div class="stat-card">
+                    <h3>3+</h3>
+                    <p>Years Exp</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Skills Section (Example) -->
-    <section id="skills">
-        <h2>My Skills</h2>
-        <div class="skill-container">
-            <div class="skill">
-                <span>PHP</span>
-                <div class="bar"><div class="progress" style="width: 90%;"></div></div>
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-title">
+                <span class="tag">SKILLS</span>
+                <h2>Technologies I work with</h2>
             </div>
-            <!-- Repeat for other skills -->
+            <div class="skills-wrapper">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-list">
+                        <span>React</span><span>Next.js</span><span>Tailwind</span><span>TypeScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-list">
+                        <span>Node.js</span><span>Python</span><span>PostgreSQL</span><span>FastAPI</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title">
+                <span class="tag">PROJECTS</span>
+                <h2>Featured Work</h2>
+            </div>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-info">
+                        <h3>AI Code Assistant</h3>
+                        <p>Custom LLM tool for clean code generation.</p>
+                        <a href="#">Github <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer">
+        <div class="container">
+            <h2>Let's build something impactful.</h2>
+            <a href="mailto:your@email.com" class="btn-email">Get in Touch</a>
+            <p class="copyright">&copy; 2025 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
