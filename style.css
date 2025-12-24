@@ -22,8 +22,8 @@
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
   /* Spacing */
-  --section-padding: 100px 0;
-  --container-max: 1200px;
+  --section-padding: 60px 0;
+  --container-max: 1300px;
 
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -305,7 +305,7 @@ img {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  line-height: 1.1;
+  /* line-height: 1.1; */
   margin-bottom: 0.5rem;
   animation: fadeInUp 0.6s ease 0.1s forwards;
   opacity: 0;
@@ -353,7 +353,7 @@ img {
 .hero-description {
   font-size: 1.1rem;
   color: var(--text-secondary);
-  max-width: 500px;
+  max-width: 800px;
   margin-bottom: 2rem;
   animation: fadeInUp 0.6s ease 0.3s forwards;
   opacity: 0;
@@ -437,6 +437,7 @@ img {
   overflow: hidden;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   border: 1px solid var(--glass-border);
+  /* margin-bottom: 70px; */
 }
 
 .code-header {
@@ -475,7 +476,7 @@ img {
 .code-content {
   padding: 1.5rem;
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   line-height: 1.8;
   overflow-x: auto;
 }
@@ -595,10 +596,9 @@ section {
 
 /* ===== About Section ===== */
 .about-content {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 4rem;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 .about-text p {
@@ -644,12 +644,17 @@ section {
 .about-image {
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 50vh;
+  padding: 3rem 0;
 }
 
 .image-frame {
   position: relative;
-  width: 280px;
-  height: 280px;
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
 }
 
 .frame-border {
@@ -660,16 +665,12 @@ section {
   z-index: -1;
 }
 
-.profile-placeholder {
+.profile-image {
   width: 100%;
   height: 100%;
-  background: var(--accent-gradient);
+  object-fit: cover;
   border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 6rem;
-  color: white;
+  display: block;
 }
 
 /* ===== Experience Section ===== */
@@ -801,21 +802,39 @@ section {
 .job-responsibilities li {
   color: var(--text-secondary);
   margin-bottom: 0.75rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
 }
 
-.job-responsibilities i {
+.job-responsibilities li > i {
   color: var(--accent-primary);
   font-size: 0.7rem;
-  margin-top: 0.4rem;
+  margin-right: 0.75rem;
+}
+
+.job-responsibilities li > strong {
+  color: var(--text-secondary);
+  font-weight: 400;
 }
 
 .job-tech {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.sub-list {
+  list-style-type: disc;
+  margin-top: 0.3rem;
+  margin-left: 2rem;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.sub-list li {
+  color: var(--text-secondary);
+  margin-bottom: 0.3rem;
+  margin-left: 1rem;
+  font-size: 0.95rem;
 }
 
 .tech-tag {
