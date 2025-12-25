@@ -169,3 +169,56 @@ document.addEventListener('mousemove', (e) => {
 console.log('%c👋 Hey there, fellow developer!', 'font-size: 20px; font-weight: bold; color: #6366f1;');
 console.log('%cInterested in the code? Check out my GitHub: https://github.com/Vaishagh-P', 'font-size: 14px; color: #8b5cf6;');
 console.log('%cLet\'s connect! 🚀', 'font-size: 14px; color: #a855f7;');
+
+// Show "Scroll Down" indicator only once per session (first home visit)
+(function () {
+  const scrollIndicator = document.querySelector('.scroll-indicator');
+  if (!scrollIndicator) return;
+
+  const key = 'seenScrollIndicator_v1';
+
+  const hideIndicatorImmediate = () => {
+    scrollIndicator.classList.add('hidden');
+    try {
+      sessionStorage.setItem(key, '1');
+    } catch (e) {
+      /* ignore storage errors */
+    }
+    window.removeEventListener('scroll', onFirstScroll);
+    document.removeEventListener('click', onFirstClick);
+  };
+
+  let hideIndicator = () => hideIndicatorImmediate();
+
+  const onFirstScroll = () => hideIndicator();
+  const onFirstClick = (e) => {
+    if (!scrollIndicator.contains(e.target)) hideIndicator();
+  };
+
+  // If already seen this session, hide immediately
+  try {
+    if (sessionStorage.getItem(key)) {
+      scrollIndicator.classList.add('hidden');
+      return;
+    }
+  } catch (e) {
+    // storage may be unavailable in some browsers; continue and let JS hide on interaction
+  }
+
+  // Ensure visible initially (in case CSS or other scripts modified it)
+  scrollIndicator.classList.remove('hidden');
+
+  // Hide when user interacts (scroll or click outside the indicator)
+  window.addEventListener('scroll', onFirstScroll, { passive: true });
+  document.addEventListener('click', onFirstClick);
+
+  // Also auto-hide after 6 seconds to avoid lingering
+  const autoHide = setTimeout(hideIndicator, 6000);
+
+  // Replace hideIndicator to clear timeout before hiding
+  const originalHide = hideIndicator;
+  hideIndicator = () => {
+    clearTimeout(autoHide);
+    originalHide();
+  };
+})();
